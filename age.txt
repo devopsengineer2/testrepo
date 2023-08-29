@@ -1,0 +1,15 @@
+CustomerAge = 
+VAR__AGE=DATEDIFF(DimCustomer[BirthDate],TODAY(),YEAR)
+RETURN
+SWITCH(TRUE(),
+__AGE>100,"101-110",
+__AGE>90,"91-100",
+__AGE>80,"81-90",
+__AGE>70,"71-80",
+__AGE>60,"61-70",
+__AGE>50,"51-60",
+__AGE>40,"41-50",
+__AGE>30,"31-40",
+__AGE>20,"21-30",
+__AGE>10,"11-20",
+"0-10")
